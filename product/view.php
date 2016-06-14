@@ -5,10 +5,8 @@ if (isset($_GET["sku"])) {
 }
 
 require("../class/product.php");
-$product = new Product;
+$product  = new Product;
 $products = $product->getProductsBySearch($sku);
-
-var_dump($products);
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +26,25 @@ var_dump($products);
 				<a id="link" class="btn btn-default" href="view.php?sku=">Submit</a>
 				<input type="text" class="form-control" id="usr" value="<?php echo $sku; ?>" onkeyup='$("#link").attr("href", "view.php?sku=" + this.value)'>
 			</div>
+			
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Sku</th>
+						<th>Height</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					foreach ($products as $product) {
+						echo "<tr><td>" . $product->sku . "</td>";
+						echo "<td>" . $product->height . "</td>";
+						echo "<td>" . "Edit" . "</td></tr>";
+					}
+					?>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>
