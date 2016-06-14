@@ -16,12 +16,12 @@
 						<a class="navbar-brand" href="#">Home</a>
 					</div>
 					<ul class="nav navbar-nav">
-						<li><a target="_blank" href="view.php?cid=0">Sales Report</a></li>
+						<li><a target="_blank" href="report.php">Sales Report</a></li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="product/view.php">Products
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Page 1-1</a></li>
+								<li><a target="_blank" href="product/view.php">View</a></li>
 								<li><a href="#">Page 1-2</a></li>
 								<li><a href="#">Page 1-3</a></li>
 							</ul>

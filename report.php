@@ -50,7 +50,7 @@ $childrenIds = $currentCategory->getChildrenIds();
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">VIEW CHILDREN
 							<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="<?php echo "http://dev.tradedepot.co.nz/it/report.php?cid=" . $childrenIds[0]; ?>"><?php echo $currentCategory->getNameById($childrenIds[0]); ?></a></li>
+								<li><a href="<?php echo "report.php?cid=" . $childrenIds[0]; ?>"><?php echo $currentCategory->getNameById($childrenIds[0]); ?></a></li>
 								<li><a href="#">Page 1-2</a></li>
 								<li><a href="#">Page 1-3</a></li>
 							</ul>
