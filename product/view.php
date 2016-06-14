@@ -4,12 +4,11 @@ if (isset($_GET["sku"])) {
     $sku = $_GET["sku"];
 }
 
-$cars = array("Volvo", "BMW", "Toyota");
-$testA = array();
-for ($i = 0; $i < 10000; $i++) {
-	array_push($testA, $cars);
-}
-var_dump($testA);
+require("../class/product.php");
+$product = new Product;
+$products = $product->getProductsBySearch($sku);
+
+var_dump($products);
 ?>
 
 <!DOCTYPE html>
